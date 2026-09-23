@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalEase - AI Legal Document Generator</title>
+</head>
+<body>
+
+    <h1>LegalEase</h1>
+    <p>AI-Powered Legal Document Generator</p>
+
+    <h2>Generate Your Legal Document</h2>
+
+    <label for="documentType">Select Document Type:</label>
+    <select id="documentType">
+        <option value="">Select a document</option>
+        <option value="rental">Rental Agreement</option>
+        <option value="affidavit">Affidavit</option>
+        <option value="complaint">Legal Complaint</option>
+        <option value="agreement">General Agreement</option>
+    </select>
+
+    <br><br>
+
+    <label for="details">Enter Details:</label><br>
+    <textarea id="details" rows="8" cols="50"
+        placeholder="Enter the required information here..."></textarea>
+
+    <br><br>
+
+    <button onclick="generateDocument()">Generate Document</button>
+
+    <h2>Document Preview</h2>
+    <div id="preview">
+        Your generated document will appear here.
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
