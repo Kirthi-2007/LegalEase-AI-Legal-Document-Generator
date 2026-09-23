@@ -3,38 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>LegalEase - AI Legal Document Generator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>LegalEase</h1>
-    <p>AI-Powered Legal Document Generator</p>
+    <header>
+        <h1>LegalEase</h1>
+        <p>AI-Powered Legal Document Generator</p>
+    </header>
 
-    <h2>Generate Your Legal Document</h2>
+    <main>
 
-    <label for="documentType">Select Document Type:</label>
-    <select id="documentType">
-        <option value="">Select a document</option>
-        <option value="rental">Rental Agreement</option>
-        <option value="affidavit">Affidavit</option>
-        <option value="complaint">Legal Complaint</option>
-        <option value="agreement">General Agreement</option>
-    </select>
+        <section class="intro">
+            <h2>Generate Your Legal Document</h2>
+            <p>
+                Enter the required information and generate a structured
+                legal document draft.
+            </p>
+        </section>
 
-    <br><br>
+        <section class="form-section">
 
-    <label for="details">Enter Details:</label><br>
-    <textarea id="details" rows="8" cols="50"
-        placeholder="Enter the required information here..."></textarea>
+            <label for="documentType">
+                Select Document Type:
+            </label>
 
-    <br><br>
+            <select id="documentType">
+                <option value="">Select a document</option>
+                <option value="Rental Agreement">
+                    Rental Agreement
+                </option>
+                <option value="Leave and License Agreement">
+                    Leave and License Agreement
+                </option>
+                <option value="Affidavit">
+                    Affidavit
+                </option>
+                <option value="Legal Notice">
+                    Legal Notice
+                </option>
+                <option value="Employment Agreement">
+                    Employment Agreement
+                </option>
+            </select>
 
-    <button onclick="generateDocument()">Generate Document</button>
 
-    <h2>Document Preview</h2>
-    <div id="preview">
-        Your generated document will appear here.
-    </div>
+            <label for="details">
+                Enter Document Details:
+            </label>
+
+            <textarea
+                id="details"
+                rows="8"
+                placeholder="Enter the required details for your legal document..."
+            ></textarea>
+
+
+            <button id="generateBtn">
+                Generate Legal Document
+            </button>
+
+        </section>
+
+
+        <section class="result-section">
+
+            <h2>Generated Document</h2>
+
+            <div id="loading" class="hidden">
+                Generating document...
+            </div>
+
+            <pre id="result">
+Your generated legal document will appear here.
+            </pre>
+
+        </section>
+
+
+        <section class="notice">
+
+            <h3>Legal Disclaimer</h3>
+
+            <p>
+                This application generates AI-assisted legal document drafts.
+                Please review the generated document and consult a qualified
+                legal professional before using it for actual legal purposes.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 LegalEase - AI-Powered Legal Document Generator
+        </p>
+    </footer>
+
 
     <script src="script.js"></script>
 
